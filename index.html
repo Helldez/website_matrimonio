@@ -26,7 +26,7 @@
         padding: 20px;
     }
     .content img {
-        width: 100%; /* Rimpicciolire l'immagine */
+        width: 80%; /* Rimpicciolire l'immagine */
         height: auto;
         border-radius: 10px; /* Bordi arrotondati per l'immagine */
         margin: 0 auto; /* Centra l'immagine orizzontalmente */
@@ -39,9 +39,17 @@
         text-align: center;
     }
     .iban {
-        font-weight: bold;
-        font-family: sans-serif; /* Mantiene sans-serif per una migliore leggibilità */
+        font-family: 'Dancing Script', cursive; /* Mantiene sans-serif per una migliore leggibilità */
         text-align: center;
+        white-space: nowrap; /* Impedisce la rottura delle parole */
+        overflow-x: auto; /* Consente lo scorrimento orizzontale se il testo è troppo lungo */
+    }
+    /* Media query per dispositivi con larghezza fino a 600px */
+    @media (max-width: 600px) {
+        .iban {
+            font-size: 0.8em; /* Riduce la dimensione del font per dispositivi mobili */
+            white-space: normal; /* Permette la rottura delle parole su dispositivi mobili */
+        }
     }
 </style>
 </head>
@@ -53,8 +61,8 @@
     <img src="matrimonio_claudia_laura.jpeg" alt="Wallpaper matrimonio Claudio e Laura">
     <div class="message">
         <p>Il pensiero più bello che possiate farci è essere con noi nel nostro grande giorno.</p>
-        <p>Ma se gradite farci un regalo, preferiamo metterlo nel salvadanaio, e quando lo useremo in futuro, penseremo con gioia a voi e al vostro bellissimo gesto.</p>
-        <p class="iban">IBAN: IT17A0200801641000420278761</p>
+        <p>Ma se gradite farci un regalo, preferiamo metterlo nel salvadanaio, e, quando lo useremo in futuro, penseremo con gioia a voi e al vostro bellissimo gesto.</p>
+        <p class="iban">IBAN: IT17A0200801641000420278761<br>Intestatario: Claudio Amoruso</p>
     </div>
 </div>
 </body>
